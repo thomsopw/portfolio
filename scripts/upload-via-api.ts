@@ -4,7 +4,8 @@ import FormData from 'form-data';
 import fetch from 'node-fetch';
 
 const SCREENSHOTS_DIR = join(process.cwd(), 'temp-screenshots');
-const API_URL = process.env.API_URL || 'http://localhost:3000/api/upload-screenshot';
+// Try deployed API first, fallback to local
+const API_URL = process.env.API_URL || 'https://portfolio-tan-alpha-60.vercel.app/api/upload-screenshot';
 
 interface ScreenshotUpload {
   fileName: string;
