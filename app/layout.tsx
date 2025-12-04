@@ -4,10 +4,10 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Portfolio - Modern Web Development",
+  title: "Perfect Pixels - Modern Web Development",
   description: "Crafting digital experiences that convert. From product launches to SaaS platforms.",
-  keywords: ["web development", "portfolio", "website design", "SaaS", "product landing pages"],
-  authors: [{ name: "Portfolio" }],
+  keywords: ["web development", "Perfect Pixels", "website design", "SaaS", "product landing pages"],
+  authors: [{ name: "Perfect Pixels" }],
 };
 
 export const viewport: Viewport = {

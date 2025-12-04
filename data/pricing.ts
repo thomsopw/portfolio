@@ -6,9 +6,36 @@ export interface PricingTier {
   features: string[];
   popular?: boolean;
   cta: string;
+  bestFor: string[];
+  special?: boolean;
 }
 
 export const pricingTiers: PricingTier[] = [
+  {
+    id: 'single-page',
+    name: 'Single Page Special',
+    price: '$999',
+    description: 'Perfect for getting started with a beautiful, professional single-page website.',
+    features: [
+      '1 fully responsive page',
+      'Modern, mobile-first design',
+      'Contact form',
+      'Basic SEO setup',
+      'Social media links',
+      'Fast loading & optimized',
+      '2 weeks delivery',
+      '1 round of revisions',
+    ],
+    cta: 'Get Started',
+    bestFor: [
+      'Personal portfolios',
+      'Event landing pages',
+      'Simple business cards',
+      'Product launches',
+      'Small local services',
+    ],
+    special: true,
+  },
   {
     id: 'starter',
     name: 'Starter',
@@ -20,10 +47,43 @@ export const pricingTiers: PricingTier[] = [
       'Contact form',
       'Basic SEO optimization',
       'Social media integration',
+      'Google Maps integration',
       '1 month of support',
       '2 rounds of revisions',
     ],
     cta: 'Get Started',
+    bestFor: [
+      'Local restaurants & cafes',
+      'Small retail shops',
+      'Service businesses',
+      'Freelancers',
+      'Startups',
+    ],
+  },
+  {
+    id: 'business',
+    name: 'Business',
+    price: '$3,500',
+    description: 'Enhanced package for businesses ready to grow their online presence with more features.',
+    features: [
+      'Up to 8 pages',
+      'Custom design & branding',
+      'Advanced contact forms',
+      'Blog setup (3 posts)',
+      'Full SEO optimization',
+      'Analytics integration',
+      'Image gallery',
+      '2 months of support',
+      '3 rounds of revisions',
+    ],
+    cta: 'Get Started',
+    bestFor: [
+      'Growing restaurants',
+      'Boutique stores',
+      'Professional services',
+      'Real estate agents',
+      'Fitness studios',
+    ],
   },
   {
     id: 'professional',
@@ -36,6 +96,7 @@ export const pricingTiers: PricingTier[] = [
       'Advanced animations',
       'Full SEO optimization',
       'Analytics integration',
+      'Blog with CMS',
       '3 months of support',
       'Unlimited revisions',
       'Performance optimization',
@@ -43,6 +104,40 @@ export const pricingTiers: PricingTier[] = [
     ],
     popular: true,
     cta: 'Get Started',
+    bestFor: [
+      'Established restaurants',
+      'E-commerce stores',
+      'Professional agencies',
+      'Medical practices',
+      'Law firms',
+    ],
+  },
+  {
+    id: 'premium',
+    name: 'Premium',
+    price: '$7,500',
+    description: 'Advanced solution for businesses requiring sophisticated features and integrations.',
+    features: [
+      'Up to 15 pages',
+      'Premium custom design',
+      'Advanced animations & interactions',
+      'E-commerce integration',
+      'Booking/reservation system',
+      'Customer portal',
+      'API integrations',
+      '6 months of support',
+      'Unlimited revisions',
+      'Priority support',
+      'Performance optimization',
+    ],
+    cta: 'Get Started',
+    bestFor: [
+      'Multi-location businesses',
+      'Online stores',
+      'Booking-based services',
+      'SaaS companies',
+      'Healthcare clinics',
+    ],
   },
   {
     id: 'enterprise',
@@ -55,13 +150,22 @@ export const pricingTiers: PricingTier[] = [
       'API integrations',
       'User authentication',
       'Database setup',
+      'Multi-user CMS',
       '6 months of support',
       'Priority support',
       'Dedicated project manager',
       'Custom features',
       'Scalable architecture',
+      'White-label options',
     ],
     cta: 'Contact Us',
+    bestFor: [
+      'Large corporations',
+      'Franchises',
+      'Enterprise clients',
+      'Complex platforms',
+      'Custom applications',
+    ],
   },
 ];
 

@@ -46,7 +46,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onView
           
           {/* Category Badge */}
           <div className="absolute top-4 left-4">
-            <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
+            <span className="px-3 py-1 glass-strong backdrop-blur-md rounded-full text-xs font-medium text-white border border-white/20">
               {categoryLabels[project.category]}
             </span>
           </div>
@@ -88,13 +88,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onView
             {project.technologies.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className="px-2 py-1 bg-white/10 rounded text-xs text-white/80"
+                className="px-2 py-1 glass backdrop-blur-sm rounded text-xs text-white/80 border border-white/10"
               >
                 {tech}
               </span>
             ))}
             {project.technologies.length > 4 && (
-              <span className="px-2 py-1 bg-white/10 rounded text-xs text-white/80">
+              <span className="px-2 py-1 glass backdrop-blur-sm rounded text-xs text-white/80 border border-white/10">
                 +{project.technologies.length - 4}
               </span>
             )}

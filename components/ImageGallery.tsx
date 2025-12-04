@@ -39,7 +39,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md"
         onClick={onClose}
       >
         <motion.div
@@ -52,7 +52,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-10 p-2 glass-strong rounded-full hover:scale-110 transition-transform"
+            className="absolute top-4 right-4 z-10 p-2 glass-strong backdrop-blur-xl rounded-full hover:scale-110 transition-transform border border-white/20"
             aria-label="Close gallery"
           >
             <X size={24} className="text-white" />
@@ -63,14 +63,14 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             <>
               <button
                 onClick={goToPrevious}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 glass-strong rounded-full hover:scale-110 transition-transform"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 glass-strong backdrop-blur-xl rounded-full hover:scale-110 transition-transform border border-white/20"
                 aria-label="Previous image"
               >
                 <ChevronLeft size={24} className="text-white" />
               </button>
               <button
                 onClick={goToNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 glass-strong rounded-full hover:scale-110 transition-transform"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 glass-strong backdrop-blur-xl rounded-full hover:scale-110 transition-transform border border-white/20"
                 aria-label="Next image"
               >
                 <ChevronRight size={24} className="text-white" />
@@ -92,7 +92,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 
           {/* Image Counter */}
           {images.length > 1 && (
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 glass-strong rounded-full text-white text-sm">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 glass-strong backdrop-blur-xl rounded-full text-white text-sm border border-white/20">
               {currentIndex + 1} / {images.length}
             </div>
           )}

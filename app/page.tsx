@@ -112,7 +112,7 @@ export default function Home() {
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="glass-strong rounded-2xl p-12 text-center max-w-4xl mx-auto">
+            <div className="glass-strong backdrop-blur-xl rounded-2xl p-12 text-center max-w-4xl mx-auto border border-white/20">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 <span className="gradient-text">Ready to start your project?</span>
               </h2>

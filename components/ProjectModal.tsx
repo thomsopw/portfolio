@@ -67,7 +67,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm"
+              className="fixed inset-0 z-50 bg-black/70 backdrop-blur-md"
               onClick={onClose}
             />
 
@@ -79,11 +79,11 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
               className="fixed inset-4 sm:inset-8 md:inset-12 lg:inset-16 z-50 overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="glass-strong rounded-2xl p-6 md:p-8 lg:p-12 max-w-6xl mx-auto">
+              <div className="glass-strong backdrop-blur-xl rounded-2xl p-6 md:p-8 lg:p-12 max-w-6xl mx-auto border border-white/20">
                 {/* Close Button */}
                 <button
                   onClick={onClose}
-                  className="absolute top-6 right-6 p-2 glass rounded-full hover:scale-110 transition-transform z-10"
+                  className="absolute top-6 right-6 p-2 glass backdrop-blur-md rounded-full hover:scale-110 transition-transform z-10 border border-white/15"
                   aria-label="Close modal"
                 >
                   <X size={24} className="text-white" />
@@ -100,13 +100,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-6 left-6">
-                    <span className="px-4 py-2 glass-strong rounded-full text-sm font-medium text-white">
+                    <span className="px-4 py-2 glass-strong backdrop-blur-xl rounded-full text-sm font-medium text-white border border-white/20">
                       {categoryLabels[project.category]}
                     </span>
                   </div>
                   {project.videoUrl && (
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <div className="p-4 glass-strong rounded-full">
+                      <div className="p-4 glass-strong backdrop-blur-xl rounded-full border border-white/20">
                         <Play size={32} className="text-white ml-1" />
                       </div>
                     </div>
@@ -148,7 +148,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-4 py-2 glass rounded-lg text-white/90 font-medium"
+                          className="px-4 py-2 glass backdrop-blur-md rounded-lg text-white/90 font-medium border border-white/10"
                         >
                           {tech}
                         </span>
@@ -190,7 +190,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
                       <h3 className="text-xl font-semibold text-white mb-4">Results</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {project.results.map((result, index) => (
-                          <div key={index} className="glass p-4 rounded-lg text-center">
+                          <div key={index} className="glass backdrop-blur-md p-4 rounded-lg text-center border border-white/10">
                             <div className="text-3xl font-bold gradient-text mb-1">
                               {result.value}
                             </div>
@@ -228,7 +228,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
 
                   {/* Testimonial */}
                   {project.testimonial && (
-                    <div className="glass p-6 rounded-xl">
+                    <div className="glass backdrop-blur-md p-6 rounded-xl border border-white/15">
                       <p className="text-white/90 text-lg italic mb-4">&ldquo;{project.testimonial.quote}&rdquo;</p>
                       <div className="flex items-center gap-3">
                         <div>

@@ -15,7 +15,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: 'The website exceeded our expectations. The interactive features and modern design perfectly captured our product&apos;s essence.',
+    quote: 'The website exceeded our expectations. The interactive features and modern design perfectly captured our product\'s essence.',
     author: 'Sarah Johnson',
     role: 'Product Manager',
     company: 'Infinity Pyramid',

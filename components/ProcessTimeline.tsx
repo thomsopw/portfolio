@@ -42,22 +42,22 @@ export const ProcessTimeline: React.FC = () => {
 
         <div className="max-w-5xl mx-auto">
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 transform -translate-y-1/2" />
-
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+              {/* Timeline Line - positioned above icons */}
+              <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600" />
+              
               {steps.map((step, index) => (
                 <AnimatedSection key={step.title} delay={index * 0.2} direction="up">
                   <div className="text-center relative">
-                    {/* Timeline Dot */}
-                    <div className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-purple-600 rounded-full z-10" />
+                    {/* Timeline Dot - positioned on the line above icons */}
+                    <div className="hidden md:block absolute top-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-purple-600 rounded-full z-10 border-2 border-black/20" />
                     
-                    <div className="flex flex-col items-center">
-                      <div className="glass-strong p-4 rounded-full mb-4 w-20 h-20 flex items-center justify-center">
+                    <div className="flex flex-col items-center pt-6">
+                      <div className="glass-strong backdrop-blur-xl p-4 rounded-full mb-4 w-20 h-20 flex items-center justify-center border border-white/20 relative z-20">
                         {step.icon}
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                      <p className="text-white/70 text-sm">{step.description}</p>
+                      <h3 className="text-xl font-semibold text-white mb-2 px-2">{step.title}</h3>
+                      <p className="text-white/70 text-sm px-2">{step.description}</p>
                       <div className="mt-4 text-purple-400 font-bold text-2xl">
                         {index + 1}
                       </div>

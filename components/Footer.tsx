@@ -6,11 +6,11 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="glass-nav border-t border-white/10 mt-20">
+    <footer className="glass-nav border-t border-white/10 mt-20 backdrop-blur-xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold gradient-text mb-4">Portfolio</h3>
+            <h3 className="text-xl font-bold gradient-text mb-4">Perfect Pixels</h3>
             <p className="text-white/60">
               Crafting digital experiences that convert. From product launches to SaaS platforms.
             </p>
@@ -36,25 +36,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-white font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/60 hover:text-white transition-colors"
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/60 hover:text-white transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="mailto:contact@example.com"
+                href="mailto:contact@perfectpixels.com"
                 className="text-white/60 hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -65,7 +47,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/10 text-center text-white/60">
-          <p>&copy; {currentYear} Portfolio. All rights reserved.</p>
+          <p>&copy; {currentYear} Perfect Pixels. All rights reserved.</p>
         </div>
       </div>
     </footer>

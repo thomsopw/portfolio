@@ -1,6 +1,6 @@
-# Modern Portfolio Website
+# Perfect Pixels - Modern Web Development Portfolio
 
-An ultra-modern portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Features glassmorphism design, smooth animations, and a comprehensive showcase of web development projects.
+An ultra-modern portfolio website for Perfect Pixels, built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Features enhanced glassmorphism design, smooth animations, and a comprehensive showcase of web development projects.
 
 ## Features
 

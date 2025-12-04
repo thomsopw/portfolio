@@ -74,7 +74,7 @@ export const ContactForm: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 glass rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                    className="w-full px-4 py-3 glass backdrop-blur-md rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:glass-strong transition-all"
                     placeholder="Your name"
                   />
                 </div>
@@ -90,7 +90,7 @@ export const ContactForm: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 glass rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                    className="w-full px-4 py-3 glass backdrop-blur-md rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:glass-strong transition-all"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -106,7 +106,7 @@ export const ContactForm: React.FC = () => {
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 glass rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                    className="w-full px-4 py-3 glass backdrop-blur-md rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:glass-strong transition-all"
                   >
                     <option value="">Select a type</option>
                     <option value="website">Website</option>
@@ -125,7 +125,7 @@ export const ContactForm: React.FC = () => {
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 glass rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                    className="w-full px-4 py-3 glass backdrop-blur-md rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:glass-strong transition-all"
                   >
                     <option value="">Select a range</option>
                     <option value="under-5k">Under $5,000</option>
@@ -147,7 +147,7 @@ export const ContactForm: React.FC = () => {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 glass rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all resize-none"
+                  className="w-full px-4 py-3 glass backdrop-blur-md rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:glass-strong transition-all resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>

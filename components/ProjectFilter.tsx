@@ -46,10 +46,13 @@ export const ProjectFilter: React.FC<ProjectFilterProps> = ({
             {isActive && (
               <motion.div
                 layoutId="activeFilter"
-                className="absolute inset-0 glass-strong rounded-lg"
+                className="absolute inset-0 glass-strong backdrop-blur-xl rounded-lg border border-white/20"
                 initial={false}
                 transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
               />
+            )}
+            {!isActive && (
+              <div className="absolute inset-0 glass backdrop-blur-sm rounded-lg opacity-0 hover:opacity-100 transition-opacity" />
             )}
             <span className="relative z-10">
               {category.label} ({count})

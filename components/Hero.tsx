@@ -9,9 +9,10 @@ import { AnimatedSection } from './ui/AnimatedSection';
 export const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
+      {/* Animated Background with Enhanced Glassmorphism */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-indigo-900/20 to-pink-900/20" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 backdrop-blur-[2px]" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <AnimatedSection direction="fade" delay={0.2}>
@@ -50,15 +51,15 @@ export const Hero: React.FC = () => {
 
         <AnimatedSection direction="up" delay={0.8}>
           <div className="mt-16 flex flex-wrap justify-center gap-8 text-white/60">
-            <div className="text-center">
+            <div className="text-center glass px-6 py-4 rounded-xl backdrop-blur-md">
               <div className="text-3xl font-bold text-white mb-1">10+</div>
               <div className="text-sm">Projects Delivered</div>
             </div>
-            <div className="text-center">
+            <div className="text-center glass px-6 py-4 rounded-xl backdrop-blur-md">
               <div className="text-3xl font-bold text-white mb-1">100%</div>
               <div className="text-sm">Client Satisfaction</div>
             </div>
-            <div className="text-center">
+            <div className="text-center glass px-6 py-4 rounded-xl backdrop-blur-md">
               <div className="text-3xl font-bold text-white mb-1">24/7</div>
               <div className="text-sm">Support Available</div>
             </div>
@@ -72,7 +73,7 @@ export const Hero: React.FC = () => {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center glass backdrop-blur-sm">
           <div className="w-1 h-3 bg-white/30 rounded-full mt-2" />
         </div>
       </motion.div>

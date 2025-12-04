@@ -100,6 +100,44 @@ export const projects: Project[] = [
     liveUrl: 'https://www.quiory.com',
     highlight: true,
   },
+  {
+    id: 'auroras-me',
+    title: 'Auroras.me',
+    shortDescription: 'Real-time aurora forecast and space weather tracking platform with NOAA data integration and live solar wind monitoring.',
+    fullDescription: 'Auroras.me is a comprehensive real-time aurora forecast and space weather tracking application that provides users with accurate predictions for viewing the Northern and Southern Lights. The platform integrates multiple data sources including NOAA Space Weather Prediction Center, NASA GIBS, and OpenWeatherMap to deliver live aurora viewlines, OVATION 30-minute forecasts, Kp index tracking, and space weather alerts. The application features auto-refreshing data, interactive globe visualizations, and educational resources about aurora visibility conditions.',
+    image: 'https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e8?w=1200&h=800&fit=crop',
+    images: [
+      'https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e8?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1200&h=800&fit=crop',
+    ],
+    category: 'custom',
+    technologies: ['React', 'Next.js', 'TypeScript', 'API Integration', 'Real-time Data', 'Data Visualization'],
+    features: [
+      'Real-time NOAA aurora viewline data',
+      'OVATION 30-minute forecast with auto-refresh',
+      'Space weather alerts and notifications',
+      'Kp index and G-scale tracking',
+      'Interactive globe visualizations',
+      'Northern and Southern hemisphere views',
+      'Real-time solar wind data integration',
+      'Educational resources and tutorials',
+    ],
+    challengesSolved: [
+      'Integrating multiple real-time data sources (NOAA, NASA, OpenWeatherMap)',
+      'Creating accurate aurora forecast visualizations on global maps',
+      'Implementing auto-refresh functionality for live data updates',
+      'Presenting complex space weather data in an accessible format',
+      'Optimizing performance with frequent data updates',
+    ],
+    results: [
+      { metric: 'Data Refresh Rate', value: '5-15 min' },
+      { metric: 'Data Sources', value: '5+ APIs' },
+      { metric: 'Real-time Accuracy', value: 'Live' },
+    ],
+    liveUrl: 'https://auroras.me',
+    highlight: true,
+  },
 ];
 
 export const getProjectsByCategory = (category: ProjectCategory | 'all'): Project[] => {
