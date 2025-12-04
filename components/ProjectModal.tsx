@@ -78,6 +78,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               className="fixed inset-4 sm:inset-8 md:inset-12 lg:inset-16 z-50 overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-title"
             >
               <div className="glass-strong backdrop-blur-xl rounded-2xl p-6 md:p-8 lg:p-12 max-w-6xl mx-auto border border-white/20">
                 {/* Close Button */}
@@ -117,7 +120,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
                 <div className="space-y-6">
                   {/* Title and Links */}
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white">{project.title}</h2>
+                    <h2 id="modal-title" className="text-4xl md:text-5xl font-bold text-white">{project.title}</h2>
                     <div className="flex gap-3">
                       {project.liveUrl && (
                         <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">

@@ -55,6 +55,10 @@ export const ContactForm: React.FC = () => {
         setTimeout(() => setSubmitStatus('idle'), 5000);
       } else {
         setSubmitStatus('error');
+        // Store error message if available
+        if (result.error) {
+          console.error('Form submission error:', result.error);
+        }
         // Reset error message after 5 seconds
         setTimeout(() => setSubmitStatus('idle'), 5000);
       }
@@ -189,9 +193,10 @@ export const ContactForm: React.FC = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="flex items-center gap-2 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400"
+                  role="alert"
                 >
                   <AlertCircle size={20} />
-                  <span>Something went wrong. Please try again.</span>
+                  <span>Something went wrong. Please check your connection and try again.</span>
                 </motion.div>
               )}
 

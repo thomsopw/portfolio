@@ -42,6 +42,8 @@ export const ProjectFilter: React.FC<ProjectFilterProps> = ({
             )}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            aria-pressed={isActive}
+            aria-label={`Filter projects by ${category.label}`}
           >
             {isActive && (
               <motion.div

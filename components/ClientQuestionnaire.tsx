@@ -135,7 +135,12 @@ const ClientQuestionnaire: React.FC = () => {
         });
         setActiveSection(null);
       } else {
+        const result = await response.json().catch(() => ({}));
         setSubmitStatus('error');
+        // Log error message if available
+        if (result.error) {
+          console.error('Questionnaire submission error:', result.error);
+        }
       }
     } catch (error) {
       console.error('Error submitting questionnaire:', error);
@@ -528,13 +533,13 @@ const ClientQuestionnaire: React.FC = () => {
               )}
 
               {submitStatus === 'error' && (
-                <div className="mb-6 p-4 glass-strong backdrop-blur-xl rounded-lg border border-red-500/50">
+                <div className="mb-6 p-4 glass-strong backdrop-blur-xl rounded-lg border border-red-500/50" role="alert">
                   <div className="flex items-center gap-3 text-red-400">
                     <Send className="w-5 h-5" />
                     <div>
                       <h3 className="font-semibold text-white mb-1">Submission Error</h3>
                       <p className="text-sm text-white/80">
-                        Please make sure all required fields are filled out and try again.
+                        Please check your connection, ensure all required fields are filled out, and try again.
                       </p>
                     </div>
                   </div>

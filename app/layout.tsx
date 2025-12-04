@@ -8,6 +8,17 @@ export const metadata: Metadata = {
   description: "Crafting digital experiences that convert. From product launches to SaaS platforms.",
   keywords: ["web development", "Perfect Pixels", "website design", "SaaS", "product landing pages"],
   authors: [{ name: "Perfect Pixels" }],
+  openGraph: {
+    title: "Perfect Pixels - Modern Web Development",
+    description: "Crafting digital experiences that convert. From product launches to SaaS platforms.",
+    type: "website",
+    url: "https://portfolio-tan-alpha-60.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Perfect Pixels - Modern Web Development",
+    description: "Crafting digital experiences that convert. From product launches to SaaS platforms.",
+  },
 };
 
 export const viewport: Viewport = {
